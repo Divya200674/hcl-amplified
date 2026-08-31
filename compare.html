@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="eyebrow">Compare</p>
+<h1>Same goal. Three lives.</h1>
+<p class="lede">Fast-track if the calendar is tight. Deep if you want coverage. Balanced is the default.</p>
+<button class="btn primary" id="compute">Compute all three</button>
+<div class="variant-grid" id="variants"></div>
+<div class="panel chart-wrap">
+  <canvas id="compare-chart"></canvas>
+</div>
+<section class="weights">
+  <h2>How scoring works</h2>
+  <table class="grid">
+    <thead><tr><th>Signal</th><th>Weight</th><th>What it captures</th></tr></thead>
+    <tbody>
+      <tr><td>Content (TF-IDF)</td><td>28%</td><td>Goal language vs course text</td></tr>
+      <tr><td>Career skills</td><td>18%</td><td>Role-specific map</td></tr>
+      <tr><td>Skill gap</td><td>16%</td><td>What you still lack</td></tr>
+      <tr><td>Domain</td><td>12%</td><td>Data / web / cloud…</td></tr>
+      <tr><td>Level</td><td>10%</td><td>Beginner → advanced</td></tr>
+      <tr><td>Style / time / popularity / feedback</td><td>16%</td><td>Fit + your 👍👎</td></tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>bootCompare();</script>
+{% endblock %}

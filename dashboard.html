@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="eyebrow">Progress</p>
+<h1>What you can do this week.</h1>
+<div class="kpis" id="dash-kpis"></div>
+<div class="split">
+  <div class="panel chart-wrap">
+    <h3>Skill radar</h3>
+    <canvas id="radar"></canvas>
+  </div>
+  <div>
+    <div class="next" id="next-action"></div>
+    <form class="panel" id="progress-form">
+      <h3>Update an item</h3>
+      <select id="prog-item"></select>
+      <select id="prog-status">
+        <option value="in_progress">In progress</option>
+        <option value="completed">Completed</option>
+      </select>
+      <button class="btn primary" type="submit">Save progress</button>
+      <p class="hint">Completing an item unlocks skills and rebuilds the rest of the path.</p>
+    </form>
+  </div>
+</div>
+<table class="grid" id="prog-table"></table>
+{% endblock %}
+{% block scripts %}
+<script>bootDash();</script>
+{% endblock %}
