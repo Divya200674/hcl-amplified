@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prompt Battle | Team Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="badge">
+                ⚡ LIVE TEAM GENERATOR
+            </div>
+
+            <h1>
+                PROMPT <span>BATTLE</span>
+            </h1>
+
+            <p class="subtitle">
+                THINK. CREATE. BATTLE.
+            </p>
+
+            <p class="instruction">
+                Find your number and team up with the other players selected!
+            </p>
+
+        </header>
+
+
+        <!-- Main Card -->
+        <section class="battle-card">
+
+            <div class="card-top">
+
+                <div>
+                    <span class="small-label">NEXT TEAM</span>
+                    <h2>TEAM UP!</h2>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    SYSTEM READY
+                </div>
+
+            </div>
+
+
+            <!-- Number Display -->
+            <div class="numbers-container">
+
+                <div class="number-box" id="box1">
+                    <div class="team-label">PLAYER 01</div>
+                    <div class="number" id="number1">--</div>
+                    <div class="number-status">WAITING</div>
+                </div>
+
+
+                <div class="plus">+</div>
+
+
+                <div class="number-box" id="box2">
+                    <div class="team-label">PLAYER 02</div>
+                    <div class="number" id="number2">--</div>
+                    <div class="number-status">WAITING</div>
+                </div>
+
+
+                <div class="plus">+</div>
+
+
+                <div class="number-box" id="box3">
+                    <div class="team-label">PLAYER 03</div>
+                    <div class="number" id="number3">--</div>
+                    <div class="number-status">WAITING</div>
+                </div>
+
+            </div>
+
+
+            <!-- Message -->
+            <div class="battle-message" id="battleMessage">
+                READY FOR BATTLE?
+            </div>
+
+
+            <!-- Generate Button -->
+            <button class="generate-btn" id="generateBtn">
+
+                <span class="btn-icon">⚡</span>
+
+                <span id="buttonText">
+                    GENERATE TEAM
+                </span>
+
+                <span class="arrow">→</span>
+
+            </button>
+
+
+            <!-- Progress -->
+            <div class="progress-section">
+
+                <div class="progress-info">
+                    <span>PLAYERS ASSIGNED</span>
+                    <span>
+                        <b id="usedCount">0</b> / 116
+                    </span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Reset -->
+            <button class="reset-btn" id="resetBtn">
+                ↻ RESET ALL NUMBERS
+            </button>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <div class="footer-line"></div>
+
+            <p>
+                BUILT FOR <strong>PROMPT BATTLE</strong>
+            </p>
+
+            <p class="footer-sub">
+                Three minds. One team. Unlimited possibilities.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Celebration -->
+    <div class="celebration" id="celebration">
+
+        <div class="celebration-content">
+
+            <div class="celebration-icon">
+                ⚡
+            </div>
+
+            <h2>TEAM LOCKED!</h2>
+
+            <p>Your battle squad has been selected.</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
