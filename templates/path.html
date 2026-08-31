@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="path-head">
+  <div>
+    <p class="eyebrow">Roadmap</p>
+    <h1>Ordered. Explained. Exportable.</h1>
+  </div>
+  <form class="toolbar" id="path-form">
+    <select id="intensity">
+      <option value="fast-track">Fast-track</option>
+      <option value="balanced" selected>Balanced</option>
+      <option value="deep">Deep</option>
+    </select>
+    <button class="btn primary" type="submit">Generate</button>
+    <a class="btn ghost" href="/api/export.md">Export .md</a>
+  </form>
+</section>
+<div class="kpis" id="path-kpis"></div>
+<div id="path-note"></div>
+<div class="timeline" id="timeline"></div>
+{% endblock %}
+{% block scripts %}
+<script>bootPath();</script>
+{% endblock %}
